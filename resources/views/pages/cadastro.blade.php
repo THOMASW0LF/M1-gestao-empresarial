@@ -1,4 +1,7 @@
+
 @extends('layouts.app')
+
+@vite(['resources/js/app.js'])
 
 @section('title', 'Cadastro')
 
@@ -10,12 +13,36 @@
             <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
         </div>
         <div class="mb-3">
+            <label for="sobrenome" class="form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome" placeholder="Digite seu Sobrenome">
+        </div>
+        <div class="mb-3">
+            <label for="cpf" class="form-label">Cpf</label>
+            <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
+        </div>
+        <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
             <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
         </div>
         <div class="mb-3">
-            <label for="senha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="Crie uma senha">
+            <label for="cep" class="form-label">Cep</label>
+            <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP">
+        </div>
+        <div class="mb-3">
+            <label for="logradouro" class="form-label">Logradouro</label>
+            <input type="text" class="form-control" id="logradouro" placeholder="Digite seu logradouro">
+        </div>
+        <div class="mb-3">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro" placeholder="Digite seu Bairro">
+        </div>
+        <div class="mb-3">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" placeholder="Digite sua Cidade">
+        </div>
+        <div class="mb-3">
+            <label for="uf" class="form-label">UF</label>
+            <input type="text" class="form-control" id="uf" placeholder="Digite seu UF">
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
@@ -23,4 +50,5 @@
     <div class="mt-3">
         <a href="{{ route('home') }}" class="btn btn-custom">Voltar para Home</a>
     </div>
+
 @endsection
