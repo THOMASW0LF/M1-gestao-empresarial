@@ -5,11 +5,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\IndexController;
 
 route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/sobre', [HomeController::class, 'sobre'])->name('sobre');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
+Route::post('/cadastro', [CadastroController::class, 'salvar'])->name('cliente.salvar');
 
 
 
@@ -32,8 +35,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
      Route::prefix('clientes')->group(function () {
-        Route::get('/', [AdminController::class, 'clientes'])->name('admin.clientes.index');
-        Route::get('/{id}', [AdminController::class, 'showCliente'])->name('admin.clientes.show');
+        Route::get('/', [IndexController::class, 'index'])->name('admin.clientes.index');
+        Route::get('/clientes/{id}', [AdminController::class, 'showCliente'])->name('admin.clientes.show');
     });
     });
 /*Route::prefix('/admin')->group(function(){
