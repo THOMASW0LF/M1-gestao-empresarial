@@ -10,7 +10,7 @@
         <a href="{{ route('admin.clientes.index') }}" class="list-group-item list-group-item-action list-group-item-primary">
             Gerenciar Clientes
         </a>
-        <a href="{{ route('produtos.index') }}" class="list-group-item list-group-item-action list-group-item-secondary">
+        <a href="{{ route('admin.produtos.create') }}" class="list-group-item list-group-item-action list-group-item-secondary">
             Gerenciar Produtos
         </a>
         <a href="{{ route('home') }}" class="list-group-item list-group-item-action list-group-item-custom">
