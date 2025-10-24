@@ -14,10 +14,6 @@ class AdminController extends Controller
         return view('pages.admin.dashboard');
     }
 
-    public function clientes() {
-        return view('pages.admin.clientes.index');
-    }
-
     public function showCliente($id) {
         return view('pages.admin.clientes.show', ['id' => $id]);
     }
