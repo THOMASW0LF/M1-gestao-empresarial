@@ -7,23 +7,25 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Ações</th>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Email</th>
             </tr>
         </thead>
         <tbody>
-            @for ($i = 1; $i <= 5; $i++)
-                <tr>
-                    <td>{{ $i }}</td>
-                    <td>Cliente {{ $i }}</td>
-                    <td>cliente{{ $i }}@exemplo.com</td>
-                    <td>
-                        <a href="{{ url('/admin/clientes/'.$i) }}" class="btn btn-sm btn-info">Ver</a>
-                    </td>
-                </tr>
-            @endfor
+            @forelse ($clientes as $cliente)   
+                            <tr>
+                                <th scope="row">{{ $cliente->id }}</th>
+                                <td>{{ $cliente -> nome }}</td>
+                                <td>{{ $cliente -> sobrenome }}</td>
+                                <td>{{ $cliente -> email }}</td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="5" class="text-center">Nenhum cliente cadastrado.</td>
+                            </tr>
+                        @endforelse
         </tbody>
     </table>
 @endsection
