@@ -14,7 +14,7 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [CadastroController::class, 'salvar'])->name('cliente.salvar');
 
-// aliases públicos que apontam para os mesmos métodos
+// essa merda não funciona sem isso, arrumar depois
 Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
 Route::get('/produtos/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
 

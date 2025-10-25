@@ -20,10 +20,12 @@
         <div class="mb-3">
             <label for="cpf" class="form-label">Cpf</label>
             <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF">
+            @error('cpf') <div class="text-danger">{{ $message }}</div> @enderror
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
+            @error('email') <div class="text-danger">{{ $message }}</div> @enderror
         </div>
         <div class="mb-3">
             <label for="cep" class="form-label">Cep</label>

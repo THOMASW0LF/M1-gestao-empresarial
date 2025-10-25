@@ -7,10 +7,6 @@
 @section('content')
     <h1 class="mb-4">Cadastro de produtos</h1>
 
-    @if(session('sucesso'))
-        <div class="alert alert-success">{{ session('sucesso') }}</div>
-    @endif
-
     <form action="{{ route('admin.produtos.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
